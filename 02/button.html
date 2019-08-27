@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>React.js学习</title>
+
+        <meta name="keywords" content="这里填写关键词" />
+        <meta name="description" content="这里填写说明内容" />
+    </head>
+
+    <body>
+        <div class="wrapper">
+           
+        </div>
+        <script type="text/javascript" src="./LikeButton.js"></script>
+        <script>
+            const wrapper = document.querySelector('.wrapper')
+            const likeButton1 = new LikeButton()
+            wrapper.innerHTML = likeButton1.render()
+        </script>
+    </body>
+</html>

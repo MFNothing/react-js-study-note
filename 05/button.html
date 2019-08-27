@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>React.js学习</title>
+
+        <meta name="keywords" content="这里填写关键词" />
+        <meta name="description" content="这里填写说明内容" />
+    </head>
+
+    <body>
+        <div class="wrapper">
+           
+        </div>
+        <script type="text/javascript" src="./main.js"></script>
+        <!-- <script type="text/javascript" src="./require.js"></script> -->
+        <script>
+            const wrapper = document.querySelector('.wrapper')
+            
+            const mount = (component, wrapper) => {
+                wrapper.appendChild(component._renderDOM())
+                component.onStateChange = (oldEl, newEl) => {
+                    wrapper.insertBefore(newEl, oldEl)
+                    wrapper.removeChild(oldEl)
+                }
+            }
+            mount(new LikeButton(), wrapper)
+        </script>
+    </body>
+</html>
