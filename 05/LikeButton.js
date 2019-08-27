@@ -1,8 +1,8 @@
 
 class LikeButton extends Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             isLiked: false
         }
@@ -16,7 +16,7 @@ class LikeButton extends Component {
 
     render() {
         return `
-            <button class='like-btn'>
+            <button class='like-btn' style="background-color: ${this.props.bgColor}">
                 <span class='like-text'>${this.state.isLiked ? '取消' : '点赞'}</span>
                 <span>👍</span>
             </button>

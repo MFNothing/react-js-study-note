@@ -1,6 +1,11 @@
 // document.write('<script type="text/javascript" src="./util.js"></script>')
 
 class Component {
+
+    constructor(props = {}) {
+        this.props = props
+    }
+    
     setState(state) {
         const oldEl = this.el
         this.state = state
