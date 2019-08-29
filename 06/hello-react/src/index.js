@@ -1,33 +1,22 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { HTML } from './01/html'
+import LikeButton from './02/LikeButton'
 
-
-// class Header extends Component {
-//     render() {
-//         return (
-//             <div>
-//                 <h1>React 小书</h1>
-//             </div>
-//         )
-//     }
-// }
-
-// 等同于 
-
-class Header extends Component {
-    render() {
-        return(
-            React.createElement(
-                'div', 
-                null,
-                React.createElement(
-                    'h1', 
-                    { className: 'title'},
-                    "React 小书")
-            )
-        )
-    }
+class Index extends Component {
+  render () {
+    return (
+      <div>
+        <HTML />
+        <LikeButton />
+      </div>
+    )
+  }
 }
 
-ReactDOM.render(<Header />, document.getElementById('root'));
+
+ReactDOM.render(
+  <Index />,
+  document.getElementById('root')
+)
