@@ -34,24 +34,27 @@ export default class CommentInput extends Component {
 
     componentDidMount() {
         this.textarea.focus()
-        this._loadUsername()
+        // this._loadUsername()
     }
 
-    _loadUsername() {
-        const username = localStorage.getItem('username')
-        if (username) {
-            this.setState({
-                username: username
-            })
-        }
-    }
+    // _loadUsername() {
+    //     const username = localStorage.getItem('username')
+    //     if (username) {
+    //         this.setState({
+    //             username: username
+    //         })
+    //     }
+    // }
 
-    _saveUsername(username) {
-        localStorage.setItem('username', username)
-    }
+    // _saveUsername(username) {
+    //     localStorage.setItem('username', username)
+    // }
 
     handleUsernameBlur(event) {
-        this._saveUsername(event.target.value)
+        // this._saveUsername(event.target.value)
+        if (this.props.onUserNameInputBlur) {
+            this.props.onUserNameInputBlur(event.target.value)
+        }
     }
 
     render() {

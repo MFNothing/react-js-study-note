@@ -26,3 +26,7 @@ export default function(state, action) {
                 
     }
 }
+
+export const initComments = (comments) => {type: INIT_COMMENTS, comments}
+export const addComment = (comment) => {type: INIT_COMMENTS, comment}
+export const delelteComment = (commentIndex) => {type: INIT_COMMENTS, commentIndex}
