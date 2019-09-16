@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ThemeSwitch from './containers/ThemeSwitch'
+import ThemeSwitch from './ThemeSwitch'
 // import ThemeSwitch from './ThemeSwitch'
 // import { connect } from './connect'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 
 class Content extends Component {
 
@@ -15,18 +15,10 @@ class Content extends Component {
         return (
             <div>
                 <p style={{color: this.props.themeColor}}>React.js 小书内容</p>
-                <ThemeSwitch />
+                <ThemeSwitch onSwitchColor={this.props.onSwitchColor} themeColor={this.props.themeColor}/>
             </div>
         )
     }
 }
-
-const mapStateToProps = (state) => {
-    return {
-        themeColor: state.themeColor
-    }
-}
-
-Content = connect(mapStateToProps)(Content)
 
 export default Content

@@ -8,6 +8,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-Header = connect(mapStateToProps)(Header)
-
-export default Header
+export default connect(mapStateToProps)(Header)
