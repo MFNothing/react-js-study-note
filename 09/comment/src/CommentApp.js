@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import CommentInput from './components/CommentInput'
-import CommentList from './components/CommentList'
+import CommentInput from './containers/CommentInput'
+import CommentList from './containers/CommentList'
 import './index.css'
 
 
@@ -49,8 +49,8 @@ export default class CommentApp extends Component {
         console.log(this.state.commentList)
         return(
             <div className="wrapper">
-                <CommentInput onSubmit={this.onSubmit.bind(this)}/>
-                <CommentList comments={this.state.commentList} onDeleteComment={this.handleDeleteComment.bind(this)} />
+                <CommentInput />
+                <CommentList />
             </div>
         )
     }

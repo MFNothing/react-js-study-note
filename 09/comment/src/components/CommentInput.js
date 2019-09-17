@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 
 export default class CommentInput extends Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
-            username: '',
+            username: props.username,
             content: ''
         }
     }

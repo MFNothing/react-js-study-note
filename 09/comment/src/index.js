@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import {createStore} from 'redux'
+import commentReducer from './reducers/Comments'
+import { Provider } from 'react-redux'
 
 
 
@@ -16,4 +19,6 @@ class Index extends Component {
   }
 }
 
-ReactDOM.render(<Index />, document.getElementById('root'));
+const store = createStore(commentReducer)
+
+ReactDOM.render(<Provider store={store}><Index /></Provider>, document.getElementById('root'));
